@@ -2,15 +2,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const profile = getData("mymoney_profile");
 
+  const path = window.location.pathname;
+
   if (
-    window.location.pathname.includes("index.html") ||
-    window.location.pathname === "/"
+    path === "/mymoney/" ||
+    path.endsWith("index.html")
   ) {
 
     if (profile) {
-      window.location.href = "pages/dashboard.html";
+      window.location.href = "./pages/dashboard.html";
     } else {
-      window.location.href = "pages/setup.html";
+      window.location.href = "./pages/setup.html";
     }
 
   }
