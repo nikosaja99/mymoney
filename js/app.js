@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (
     window.location.pathname.includes("index.html") ||
-    window.location.pathname === "/pages/setup.html"
+    window.location.pathname === "/"
   ) {
 
     if (profile) {
