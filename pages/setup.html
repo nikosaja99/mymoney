@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>MyMoney - Pengaturan Awal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-100 min-h-screen">
+
+  <div class="max-w-md mx-auto p-4">
+
+    <div class="bg-white rounded-2xl shadow p-6 mt-6">
+
+      <h1 class="text-2xl font-bold text-center">
+        Selamat Datang di MyMoney
+      </h1>
+
+      <p class="text-gray-500 text-center mt-2">
+        Lengkapi data berikut untuk memulai.
+      </p>
+
+      <div class="mt-6 space-y-4">
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Nama
+          </label>
+
+          <input
+            id="nama"
+            type="text"
+            class="w-full border rounded-lg p-3"
+            placeholder="Masukkan nama"
+          >
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Profesi
+          </label>
+
+          <select
+            id="profesi"
+            class="w-full border rounded-lg p-3"
+          >
+            <option value="">Pilih Profesi</option>
+            <option>Mahasiswa</option>
+            <option>Fresh Graduate</option>
+            <option>Karyawan</option>
+            <option>Freelancer</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Dana Utama Berasal Dari
+          </label>
+
+          <select
+            id="sumberDana"
+            class="w-full border rounded-lg p-3"
+          >
+            <option value="">Pilih Sumber Dana</option>
+            <option>Orang Tua</option>
+            <option>Beasiswa</option>
+            <option>Gaji</option>
+            <option>Freelance</option>
+            <option>Bisnis</option>
+            <option>Lainnya</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Dana Berikutnya Masuk
+          </label>
+
+          <input
+            id="tanggalDana"
+            type="date"
+            class="w-full border rounded-lg p-3"
+          >
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Jumlah Dana Berikutnya
+          </label>
+
+          <input
+            id="jumlahDana"
+            type="number"
+            class="w-full border rounded-lg p-3"
+            placeholder="2500000"
+          >
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Saldo Saat Ini
+          </label>
+
+          <input
+            id="saldo"
+            type="number"
+            class="w-full border rounded-lg p-3"
+            placeholder="1800000"
+          >
+        </div>
+
+        <div>
+          <label class="block mb-1 font-medium">
+            Jam Notifikasi
+          </label>
+
+          <input
+            id="jamNotifikasi"
+            type="time"
+            class="w-full border rounded-lg p-3"
+          >
+        </div>
+
+        <button
+          onclick="simpanProfil()"
+          class="w-full bg-blue-600 text-white rounded-lg p-3 font-medium"
+        >
+          Mulai Mengelola Keuangan
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/setup.js"></script>
+
+</body>
+</html>

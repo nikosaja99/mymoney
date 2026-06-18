@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyMoney - Target</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-slate-50 pb-24">
+
+  <div class="max-w-md mx-auto p-4 flex flex-col gap-4">
+
+    <h1 class="text-2xl font-bold">Target Keuangan 🎯</h1>
+
+    <!-- FORM -->
+    <div class="bg-white p-4 rounded-2xl shadow flex flex-col gap-3">
+
+      <input id="nama" class="border p-3 rounded-lg" placeholder="Contoh: Laptop / HP">
+
+      <input id="target" type="number" class="border p-3 rounded-lg" placeholder="Target harga">
+
+      <input id="terkumpul" type="number" class="border p-3 rounded-lg" placeholder="Uang terkumpul">
+
+      <input id="tanggal" type="date" class="border p-3 rounded-lg">
+
+      <button onclick="tambahTarget()" class="bg-blue-600 text-white p-3 rounded-lg">
+        Tambah Target
+      </button>
+
+    </div>
+
+    <!-- LIST -->
+    <div id="listTarget" class="flex flex-col gap-3"></div>
+
+  </div>
+
+  <div id="navbar"></div>
+
+  <script src="../js/storage.js"></script>
+  <script src="../js/target.js"></script>
+  <script src="../js/component-loader.js"></script>
+
+</body>
+</html>
