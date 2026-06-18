@@ -1,19 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MyMoney</title>
 </head>
-<body class="bg-slate-100">
+<body>
 
-  <div id="app"></div>
+<script src="js/storage.js"></script>
 
-  <script src="js/storage.js"></script>
-  <script src="js/utils.js"></script>
-  <script src="js/setup.js"></script>
-  <script src="js/dashboard.js"></script>
-  <script src="js/app.js"></script>
+<script>
+const profile = localStorage.getItem("mymoney_profile");
+
+if (profile) {
+    window.location.replace("./pages/dashboard.html");
+} else {
+    window.location.replace("./pages/setup.html");
+}
+</script>
 
 </body>
 </html>
