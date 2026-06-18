@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const profile = getData("mymoney_profile");
 
-  if (
-    window.location.pathname.includes("index.html") ||
-    window.location.pathname === "/"
-  ) {
+  const path = window.location.pathname;
+
+  const isHomePage =
+    path.endsWith("/") ||
+    path.endsWith("index.html");
+
+  if (isHomePage) {
 
     if (profile) {
       window.location.href = "pages/dashboard.html";
